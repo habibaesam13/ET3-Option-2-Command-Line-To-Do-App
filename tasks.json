@@ -1,0 +1,23 @@
+[
+  {
+    "description": "learn html",
+    "category": "web",
+    "priority": "LOW",
+    "done": false,
+    "createdAt": "2025-08-12T20:04:45.947111100"
+  },
+  {
+    "description": "web design",
+    "category": "web",
+    "priority": "HIGH",
+    "done": false,
+    "createdAt": "2025-08-12T20:04:51.497378400"
+  },
+  {
+    "description": "add milk",
+    "category": "eat",
+    "priority": "MEDIUM",
+    "done": false,
+    "createdAt": "2025-08-12T20:04:53.790392200"
+  }
+]
