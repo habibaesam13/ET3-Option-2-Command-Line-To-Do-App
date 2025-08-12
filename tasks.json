@@ -14,10 +14,10 @@
     "createdAt": "2025-08-12T20:04:51.497378400"
   },
   {
-    "description": "add milk",
-    "category": "eat",
+    "description": "Uploading to github",
+    "category": "deployment",
     "priority": "MEDIUM",
     "done": false,
-    "createdAt": "2025-08-12T20:04:53.790392200"
+    "createdAt": "2025-08-12T20:59:56.573891100"
   }
 ]

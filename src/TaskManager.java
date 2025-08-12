@@ -55,19 +55,14 @@ public class TaskManager {
         }
     }
 
-    public void listByCategory(String category) {
-        boolean found = false;
-        List<Task> sorted = getTasks();
-        for (int i = 0; i < sorted.size(); i++) {
-            Task t = sorted.get(i);
-            if (t.getCategory().equalsIgnoreCase(category)) {
-                System.out.println((i + 1) + ". " + t);
-                found = true;
+    public List<Task> getTasksByCategory(String category) {
+        List<Task> result = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.getCategory() != null && task.getCategory().equalsIgnoreCase(category)) {
+                result.add(task);
             }
         }
-        if (!found) {
-            System.out.println("No tasks found in category: " + category);
-        }
+        return result;
     }
 
     public boolean markDone(int index) {

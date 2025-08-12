@@ -61,8 +61,17 @@ public class CommandHandler {
                     System.out.println("Error: Missing category.");
                     return;
                 }
-                manager.listByCategory(args[1]);
+                String cat = args[1];
+                List<Task> catTasks = manager.getTasksByCategory(cat);
+                if (catTasks.isEmpty()) {
+                    System.out.println("No tasks found in category: " + cat);
+                } else {
+                    for (int i = 0; i < catTasks.size(); i++) {
+                        System.out.println((i + 1) + ". " + coloredTask(catTasks.get(i)));
+                    }
+                }
                 break;
+
 
             case "done":
                 if (args.length < 2) {
