@@ -37,10 +37,10 @@ Tasks are displayed in the **order they were added**.
     ````
 
 2. **Place the Gson JAR** inside your `ET3Challenge` directory:
-```bash
-   * Download from [Gson Releases](https://github.com/google/gson/releases)
-   * Save as `ET3Challenge/gson-2.10.1.jar`
-````
+    ```bash
+       * Download from [Gson Releases](https://github.com/google/gson/releases)
+       * Save as `ET3Challenge/gson-2.10.1.jar`
+    ````
 3. **Compile**:
 
    ```bash
