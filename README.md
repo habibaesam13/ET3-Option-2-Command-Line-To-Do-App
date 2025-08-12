@@ -41,22 +41,25 @@ Tasks are displayed in the **order they were added**.
        * Download from [Gson Releases](https://github.com/google/gson/releases)
        * Save as `ET3Challenge/gson-2.10.1.jar`
     ````
+
+---
+## 🚀 Usage
+
+1. **Open terminal / PowerShell**  
+2. **Navigate to the `ET3Challenge` folder inside the cloned repository:**
+
+   ```bash
+   cd ET3Challenge
+    ```
 3. **Compile**:
 
    ```bash
-   javac -cp "ET3Challenge/gson-2.10.1.jar" -d ET3Challenge/out/production/ET3Challenge ET3Challenge/src/*.java
+   javac -cp "gson-2.10.1.jar" -d out/production/ET3Challenge src/*.java
    ```
-
----
-
-## 🚀 Usage
-
-Run from the project root:
-
-```bash
-java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar" Main <command> [arguments]
-```
-
+4. **Run the program:**
+   ```bash
+   java -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main <command> [arguments]
+   ```
 ---
 
 ## 📜 Commands
@@ -94,31 +97,31 @@ java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar"
 Add a task with default category/priority:
 
 ```bash
-java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar" Main add "Buy milk"
+java -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main add "Buy milk"
 ```
 
 Add a task with category and priority:
 
 ```bash
-java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar" Main add "Finish report" Work HIGH
+java -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main add "Finish report" Work HIGH
 ```
 
 List all tasks:
 
 ```bash
-java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar" Main list
+java -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main list
 ```
 
 Mark a task as done:
 
 ```bash
-java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar" Main done 1
+java -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main done 1
 ```
 
 Delete a task:
 
 ```bash
-java -cp "ET3Challenge/out/production/ET3Challenge;ET3Challenge/gson-2.10.1.jar" Main delete 2
+java -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main delete 2
 ```
 
 ---
