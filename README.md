@@ -1,4 +1,5 @@
 
+
 # 📋 Java Task Manager CLI
 
 A lightweight, command-line task management application built in Java.
@@ -142,4 +143,41 @@ Delete a task:
 ```bash
 "C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main delete 2
 ```
+
+---
+## Example Execution Output
+1. **Listing All Tasks**
+   
+   Displays all tasks in the list with their categories, priorities, and creation timestamps.
+   <img width="1504" height="754" alt="Screenshot (884)" src="https://github.com/user-attachments/assets/e9b3600d-a794-4cb8-9536-fe2fbb8d8d7d" />
+
+2. **Listing Tasks by Category**
+   
+   Shows only the tasks belonging to a specific category.
+   <img width="1547" height="794" alt="Screenshot 2025-08-12 205638" src="https://github.com/user-attachments/assets/c978220f-34d1-427f-a29f-923df3f784b7" />
+
+3. **Adding Tasks**
+   
+   3.1 **Adding a Task with a Specific Category (default priority: Medium)**
+   
+     Adds a task while specifying its category, leaving the priority at the default Medium level.
+     <img width="1508" height="779" alt="Screenshot 2025-08-12 210033" src="https://github.com/user-attachments/assets/c318e057-56dc-4218-bcca-d13092d590fb" />
+   3.2 **Adding a Task with a Specific Priority (default category: General)**
+
+     Adds a task while specifying the priority, leaving the category at the default General.
+     <img width="1485" height="772" alt="Screenshot 2025-08-12 210118" src="https://github.com/user-attachments/assets/a9da2b09-d848-43c6-814b-151c6c97f20b" />
+
+4. **Marking a Task as Completed**
+
+     Marks a task as done, updating its status in the task list.
+     <img width="1450" height="743" alt="Screenshot 2025-08-12 210651" src="https://github.com/user-attachments/assets/364cc3f6-983e-46b4-b9a2-a37b56e421c8" />
+
+5. **Deleting a Task**
+
+    Removes a task permanently from the task list.
+    <img width="1469" height="755" alt="Screenshot 2025-08-12 210822" src="https://github.com/user-attachments/assets/20c22082-f6bb-4f11-b31a-c74632a7fc90" />
+
+
+
+
 
