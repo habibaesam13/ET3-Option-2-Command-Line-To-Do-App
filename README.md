@@ -13,6 +13,7 @@ Tasks are displayed in the **order they were added**.
 * Add tasks with optional **category** and **priority**.
 * Mark tasks as **done**.
 * Delete tasks.
+* Edit Task [Category , Description , Priority]
 * List all tasks **in insertion order**.
 * List tasks filtered by category.
 * **Persistent storage** using JSON (via [Gson](https://github.com/google/gson)).
@@ -88,6 +89,7 @@ It must show **21** or higher.
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | `add "description" [category] [priority]` | Add a new task. Category and priority are optional. Default: category=`General`, priority=`MEDIUM`. |
 | `list`                                    | List all tasks in the order they were added.                                                        |
+| `edit <taskNumber> [desc] [cat] [prio]`   | Edit a task (at least one field required: description, category, or priority).                      |
 | `listcat <category>`                      | List tasks by category.                                                                             |
 | `done <taskNumber>`                       | Mark a task as done (✔).                                                                            |
 | `delete <taskNumber>`                     | Delete a task.                                                                                      |
@@ -131,6 +133,15 @@ List all tasks:
 ```bash
 "C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main list
 ```
+Edit a task (change description only):
+
+```bash
+"C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main edit 1 "Buy almond milk"
+```
+Edit a task (change priority only)
+"C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main edit 1 "" "" LOW
+Edit a task (change description, category, and priority at once)
+"C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main edit 2 "Finish math homework" School HIGH
 
 Mark a task as done:
 
