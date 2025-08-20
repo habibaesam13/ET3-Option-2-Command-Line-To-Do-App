@@ -1,6 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
+//Manages a list of tasks (business logic).
+/*
+* Handles operations:
 
+Add a task (with duplicate check, default values).
+
+Get all tasks.
+
+Get tasks by category.
+
+Mark a task as done.
+
+Delete a task.
+* */
 public class TaskManager {
     private List<Task> tasks;
     private FileStorage storage;
@@ -19,7 +32,6 @@ public class TaskManager {
             }
         }
     }
-
     public void addTask(String description, String category, String priority) {
         if (category == null || category.trim().isEmpty()) {
             category = "General";
@@ -40,13 +52,27 @@ public class TaskManager {
         storage.save(tasks);
         System.out.println("Task added.");
     }
+    public void editTask(String decryption,String category,String priority,int taskIndex){
+        if(taskIndex<0 || taskIndex>tasks.size()){
+            System.out.println("Task is not Defined!");
+            return;
+        }
 
+        if(! decryption.isEmpty() ){tasks.get(taskIndex).setDescription(decryption);}
+
+        if(! category.isEmpty()){tasks.get(taskIndex).setCategory(category);}
+
+        if(! priority.isEmpty()){tasks.get(taskIndex).setPriority(priority);}
+
+        storage.save(tasks);
+        System.out.println("Task Edited Successfully");
+    }
     public List<Task> getTasks() {
         return new ArrayList<>(tasks);
     }
 
     private int priorityValue(String priority) {
-        if (priority == null) return 2; // Default MEDIUM if null
+        if (priority == null) return 2;
         switch (priority.trim().toUpperCase()) {
             case "HIGH": return 1;
             case "MEDIUM": return 2;

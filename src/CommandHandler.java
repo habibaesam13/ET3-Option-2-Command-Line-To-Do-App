@@ -106,11 +106,35 @@ public class CommandHandler {
                     System.out.println("Error: Task number must be numeric.");
                 }
                 break;
+            case "edit":
+                if (args.length < 2) {
+                    System.out.println("Usage: edit <taskNumber> [newDescription] [newCategory] [newPriority]");
+                    break;
+                }
+                try {
+                    int editIndex = Integer.parseInt(args[1]) - 1;
+
+                    // باقي args اختيارية
+                    String newDescription = args.length > 2 ? args[2] : "";
+                    String newCategory    = args.length > 3 ? args[3] : "";
+                    String newPriority    = args.length > 4 ? args[4] : "";
+
+                    // لازم على الأقل واحد منهم مش فاضي
+                    if (newDescription.isEmpty() && newCategory.isEmpty() && newPriority.isEmpty()) {
+                        System.out.println("Error: At least one field (description/category/priority) must be provided.");
+                        break;
+                    }
+
+                    manager.editTask(newDescription, newCategory, newPriority, editIndex);
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: Task number must be numeric.");
+                }
+                break;
+
 
             case "help":
                 printHelp();
                 break;
-
             default:
                 System.out.println("Unknown command: " + command);
                 printHelp();
@@ -140,6 +164,7 @@ public class CommandHandler {
         System.out.println("  list                                     - List all tasks");
         System.out.println("  listcat <category>                       - List tasks by category");
         System.out.println("  done <taskNumber>                         - Mark a task as done");
+        System.out.println("  edit <taskNumber> <desc> <cat> <prio>    - Edit a task");
         System.out.println("  delete <taskNumber>                       - Delete a task");
         System.out.println("  help                                     - Show this help message");
     }
