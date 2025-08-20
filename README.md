@@ -138,11 +138,11 @@ Edit a task (change description only):
 ```bash
 "C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main edit 1 "Buy almond milk"
 ```
-##Edit a task (change priority only)
+  Edit a task (change priority only)
 ```bash
 "C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main edit 1 "" "" LOW
 ```
-##Edit a task (change description, category, and priority at once)
+  Edit a task (change description, category, and priority at once)
 ```bash
 "C:\Program Files\Java\jdk-21\bin\java.exe" -cp "out/production/ET3Challenge;gson-2.10.1.jar" Main edit 2 "Finish math homework" School HIGH
 ```
